@@ -1,0 +1,123 @@
+<!--
+ File:           index.html
+ Version:        0.9
+ Purpose:        Index
+ Author:         Ciro Finizio
+ Product:        Font Compare
+-->
+<!DOCTYPE html>
+<html lang="en">	
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   		<meta name="viewport" content="width=device-width, initial-scale=1">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+		<title>Font Compare</title>		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/colpick.js"></script>
+		<script src="js/custom.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/colpick.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		
+	</head>
+	<body>
+		<!-- Top bar -->
+		<nav class="navbar navbar-default navbar-fixed-top" id="menu" role="navigation">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">Font Compare</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse">
+				<!-- Modal for save configuration -->
+				
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		<!-- Form per le impostazioni di formattazione  -->
+		<form class="form-float" role="form">
+				<!-- Choose Config button -->
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownConf" data-toggle="dropdown" aria-expanded="true">
+				Load Configuration
+				<span class="caret"></span>
+				</button>
+				<ul id="ulConf" class="dropdown-menu" role="menu" aria-labelledby="dropdownConf">
+				
+				</ul>
+			</div>
+			<!--Dropdown con le fonts  -->		
+			<select multiple id="fontSelect"class="form-control">
+			</select>			
+			<div class="form-group">
+			<label class="sr-only" for="charSize">Font size</label>
+			<input type="charSize" class="form-control" id="size" placeholder="Font size">
+		    <select class="form-control" id="sizeT">
+					<option>px</option>
+					<option>em</option>
+					<option>%</option>
+				</select>
+			</div>				
+			<div class="checkbox">
+				<label>
+					<input id="italic" type="checkbox"> Italic
+				</label>
+				<label>
+					<input id="bold" type="checkbox"> Bold
+				</label>
+				<label>
+					<input id="oblic" type="checkbox"> Oblique
+				</label>
+			</div>
+
+			<button type="button" class="btn btn-default btn-sm" id="picker">
+				Select text color
+			</button>
+			<button type="button" class="btn btn-default btn-sm form-buttons" id="pickerBack">
+				Select background color
+			</button>
+			<button type="button" class="btn btn-primary btn-sm form-buttons" data-toggle="modal" data-target="#myModal">Save Configuration</button>
+			<!--  -->
+
+				<!-- Modal per l-inserimento del nome nel salvataggio -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog modal-sm">
+				    <div class="modal-content">
+				     
+				      <div class="modal-body">
+				    	<label class="sr-only" for="configName"></label>
+						<input class="form-control" id="configName" placeholder="Configuration name">
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        <button type="button" id="saveConfig" class="btn btn-primary">Save configuration</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				
+			</form>
+
+		<div class="page container-fluid">
+			<h1>Welcome to Font Compare <small>an easy and awesome way to compare fonts.</small> </h1>
+			<textarea id="textarea" class="form-control" rows="4"></textarea>
+			<!-- container per le tab -->
+			<div class="containerFonts container-fluid">			
+			</div>
+		</div>
+
+
+	</body>
+</html>

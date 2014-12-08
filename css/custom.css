@@ -1,0 +1,96 @@
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+body { 
+	padding-top: 70px;
+	padding-left: 30px;
+}
+.page h1{
+	position: center;
+	margin-left: auto;
+	margin-right:auto;
+}
+#menu{
+	background: #00bcd4;
+}
+#menu .navbar-header a {
+	color: white;
+}
+#navigator > .active{
+	background: #26c6da;
+	color: white;
+}
+.page{
+	width: 75%;
+	margin-right: 5%;
+}
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+#fontSelect{
+	margin-top: 10px;
+}
+#size {
+	width: 80px;
+	display: inline;
+	padding: 5px;
+	margin-top: 10px;
+}
+
+#sizeT {
+	display: inline;
+	width: 70px;
+	margin-top: 10px;
+}
+
+.form-buttons {
+	display:block;
+	margin-top: 10px;
+}
+
+.normal {
+    font-style: normal;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.oblic {
+    font-style: oblique;
+} 
+.bold {
+    font-weight: bold;
+} 
+.underline {
+    text-decoration: underline;
+}
+.containerFonts{
+	margin-top: 15px;
+}
+.containerFonts > div > div{
+	padding-left: 0;
+	padding-right: 0;
+	height: 400px;
+	
+}
+.containerFonts > div > div > .panel-heading{
+	background:  #26c6da;
+}
+.form-float{
+	position: fixed;
+	right: 10;
+	border:1px solid #00bcd4;
+	border-radius: 3%;
+	padding: 1%;
+	margin-top: 70px;
+}
+
+.containerFonts > div > div > .panel-body{
+	overflow-y: scroll;
+	height: 360px;
+}
+
